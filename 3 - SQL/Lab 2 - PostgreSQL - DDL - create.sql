@@ -1,0 +1,42 @@
+CREATE TABLE Cars (
+	ID_Car INTEGER PRIMARY KEY NOT NULL,
+	VIN VARCHAR(30) NOT NULL,
+	Manufacturer VARCHAR(50),
+	Model VARCHAR(50),
+	Year INTEGER,
+	Color VARCHAR(30)
+);
+
+CREATE TABLE Customers (
+	ID_Customer INTEGER PRIMARY KEY NOT NULL,
+	Customer_ID INTEGER NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Phone VARCHAR(30),
+	Email VARCHAR(30),
+	Adress VARCHAR(100),
+	City VARCHAR(30),
+	State_Province VARCHAR(50),
+	Country VARCHAR(30),
+	Postal INTEGER
+);
+
+CREATE TABLE Salespersons (
+	ID_Salesperson INTEGER PRIMARY KEY NOT NULL,
+	Staff_ID INTEGER NOT NULL,
+	Name VARCHAR(50) NOT NULL,
+	Store VARCHAR(30)
+);
+
+CREATE TABLE Invoices (
+	ID_Invoice INTEGER PRIMARY KEY NOT NULL,
+	Invoice_Number INTEGER,
+	Date DATE,
+	ID_Car INTEGER NOT NULL,
+	ID_Customer INTEGER NOT NULL,
+	ID_Salesperson INTEGER NOT NULL
+);
+
+SELECT * FROM Cars;
+SELECT * FROM Customers;
+SELECT * FROM Salespersons;
+SELECT * FROM Invoices;
